@@ -559,7 +559,7 @@
             font-size: 1rem;
         }
 
-        /* NOUVELLE SECTION AGILE INSPIRÉE DU SCHÉMA */
+        /* AGILE SECTION WITH DIAGRAM IMAGE */
         .agile-hero {
             text-align: center;
             margin-bottom: 40px;
@@ -569,274 +569,94 @@
             margin-bottom: 20px;
         }
 
-        .agile-workflow {
+        /* DIAGRAM CONTAINER */
+        .diagram-container {
             display: flex;
-            align-items: center;
             justify-content: center;
-            gap: 30px;
+            align-items: center;
             margin: 60px 0;
-            flex-wrap: wrap;
-        }
-
-        .workflow-left,
-        .workflow-right {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            flex: 1;
-            min-width: 300px;
-            justify-content: center;
-        }
-
-        .workflow-right {
-            flex-direction: column;
-            min-width: 200px;
-        }
-
-        .workflow-item {
-            background: linear-gradient(135deg, rgba(0, 50, 100, 0.6) 0%, rgba(0, 31, 63, 0.8) 100%);
-            border: 2px solid #FF851B;
-            border-radius: 10px;
             padding: 20px;
-            text-align: center;
             animation: slideUp 0.6s ease-out;
+        }
+
+        .agile-diagram-image {
+            max-width: 100%;
+            width: 100%;
+            max-width: 1000px;
+            height: auto;
+            border: 4px solid #FF851B;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(255, 133, 27, 0.4);
             transition: all 0.3s ease;
         }
 
-        .workflow-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(255, 133, 27, 0.3);
-            border-color: #FFFFFF;
+        .agile-diagram-image:hover {
+            transform: scale(1.02);
+            box-shadow: 0 15px 50px rgba(255, 133, 27, 0.6);
         }
 
-        .clients-item {
-            min-width: 120px;
+        /* ADVANTAGES SECTION */
+        .advantages-section {
+            margin-top: 80px;
         }
 
-        .product-item,
-        .inprogress-item {
-            min-width: 140px;
-        }
-
-        .analysis-item {
-            min-width: 100px;
-        }
-
-        .deliverable-item {
-            min-width: 120px;
-            background: linear-gradient(135deg, rgba(255, 165, 0, 0.25) 0%, rgba(255, 133, 27, 0.15) 100%);
-            border: 2px dashed #FF851B;
-        }
-
-        .feedback-item {
-            min-width: 150px;
-            margin-top: 20px;
-        }
-
-        .item-icon {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-
-        .item-label {
-            color: #FF851B;
-            font-weight: 900;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            line-height: 1.3;
-        }
-
-        .item-bars {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-            margin-bottom: 10px;
-        }
-
-        .bar {
-            background: linear-gradient(90deg, #FFB84D, #FF851B);
-            height: 12px;
-            border-radius: 3px;
-            width: 100%;
-            box-shadow: 0 2px 5px rgba(255, 133, 27, 0.4);
-        }
-
-        .workflow-arrow {
-            font-size: 2rem;
-            color: #FF851B;
-            font-weight: 900;
-        }
-
-        .workflow-arrow-down {
-            width: 3px;
-            height: 40px;
-            background: #FF851B;
-            border-radius: 3px;
-            align-self: center;
-        }
-
-        .workflow-center {
-            position: relative;
-            width: 250px;
-            height: 250px;
-            flex: 1;
-            min-width: 250px;
-        }
-
-        .agile-circle-svg {
-            width: 100%;
-            height: 100%;
-            filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
-        }
-
-        .team-center {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+        .advantages-title {
             text-align: center;
+            margin-bottom: 50px;
         }
 
-        .team-label {
+        .advantages-title h3 {
             color: #FF851B;
-            font-weight: 900;
-            font-size: 0.85rem;
+            font-size: 1.8rem;
             text-transform: uppercase;
-            margin-bottom: 12px;
-            line-height: 1.3;
+            font-weight: 900;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
         }
 
-        .team-avatars {
-            display: flex;
-            gap: 8px;
-            justify-content: center;
-        }
-
-        .team-avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #1E64C8 0%, #00CC44 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            border: 2px solid #FFFFFF;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
-        }
-
-        .feedback-avatars {
-            display: flex;
-            gap: 8px;
-            justify-content: center;
-            margin-top: 10px;
-        }
-
-        .feedback-avatar {
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #1E64C8 0%, #00CC44 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.3rem;
-            border: 2px solid #FF851B;
-            box-shadow: 0 2px 8px rgba(255, 133, 27, 0.3);
-        }
-
-        .agile-steps {
+        .advantages-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 20px;
-            margin: 40px 0;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
         }
 
-        .step-card {
-            background: linear-gradient(135deg, rgba(0, 50, 100, 0.5) 0%, rgba(0, 31, 63, 0.7) 100%);
-            border: 2px solid #FF851B;
-            border-radius: 8px;
-            padding: 20px;
+        .advantage-card {
+            background: linear-gradient(135deg, rgba(0, 50, 100, 0.7) 0%, rgba(0, 31, 63, 0.9) 100%);
+            border: 3px solid #FF851B;
+            border-radius: 12px;
+            padding: 35px;
             text-align: center;
             animation: slideUp 0.6s ease-out;
             transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(255, 133, 27, 0.2);
         }
 
-        .step-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(255, 133, 27, 0.3);
+        .advantage-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(255, 133, 27, 0.4);
+            border-color: #00CC44;
         }
 
-        .step-icon {
-            font-size: 2rem;
-            margin-bottom: 10px;
-        }
-
-        .step-title {
-            color: #FF851B;
-            font-weight: 900;
-            font-size: 0.95rem;
-            text-transform: uppercase;
-            margin-bottom: 8px;
-        }
-
-        .step-desc {
-            color: #E8E8E8;
-            font-size: 0.85rem;
-            line-height: 1.5;
-        }
-
-        .agile-explanation {
-            background: linear-gradient(135deg, rgba(0, 50, 100, 0.6) 0%, rgba(0, 31, 63, 0.8) 100%);
-            border: 2px solid #FF851B;
-            border-radius: 10px;
-            padding: 40px;
-            margin: 60px auto;
-            max-width: 900px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .agile-explanation h3 {
-            color: #FF851B;
-            font-size: 1.4rem;
+        .advantage-icon {
+            font-size: 3rem;
             margin-bottom: 20px;
-            text-transform: uppercase;
+        }
+
+        .advantage-title {
+            color: #FF851B;
+            font-size: 1.3rem;
             font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 15px;
             letter-spacing: 0.5px;
         }
 
-        .agile-explanation p {
+        .advantage-description {
             color: #E8E8E8;
             font-size: 1rem;
-            line-height: 1.8;
-            margin-bottom: 15px;
-            text-align: justify;
-        }
-
-        .agile-benefits {
-            background: linear-gradient(135deg, rgba(0, 50, 100, 0.5) 0%, rgba(0, 31, 63, 0.7) 100%);
-            border-left: 4px solid #00CC44;
-            padding: 25px;
-            border-radius: 8px;
-            margin-top: 30px;
-        }
-
-        .agile-benefits h4 {
-            color: #00CC44;
-            font-size: 1rem;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-        }
-
-        .agile-benefits ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .agile-benefits li {
-            color: #E8E8E8;
-            padding: 8px 0;
-            font-size: 0.95rem;
+            line-height: 1.7;
         }
 
         footer {
@@ -849,23 +669,13 @@
 
         /* RESPONSIVE */
         @media (max-width: 1024px) {
-            .agile-workflow {
-                flex-direction: column;
-                gap: 20px;
+            .diagram-container {
+                padding: 15px;
             }
 
-            .workflow-left,
-            .workflow-right {
-                min-width: 100%;
-            }
-
-            .workflow-center {
-                width: 200px;
-                height: 200px;
-            }
-
-            .agile-steps {
+            .advantages-grid {
                 grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
             }
         }
 
@@ -924,55 +734,40 @@
                 padding: 0 15px;
             }
 
-            .agile-workflow {
+            .diagram-container {
+                margin: 40px 0;
+                padding: 10px;
+            }
+
+            .agile-diagram-image {
+                border-width: 3px;
+                border-radius: 10px;
+            }
+
+            .advantages-grid {
+                grid-template-columns: 1fr;
                 gap: 15px;
             }
 
-            .workflow-left,
-            .workflow-right {
-                flex-direction: column;
-                min-width: 100%;
-            }
-
-            .workflow-center {
-                width: 180px;
-                height: 180px;
-            }
-
-            .team-avatar {
-                width: 40px;
-                height: 40px;
-                font-size: 1.2rem;
-            }
-
-            .team-label {
-                font-size: 0.75rem;
-            }
-
-            .agile-steps {
-                grid-template-columns: 1fr;
-            }
-
-            .step-card {
-                padding: 15px;
-            }
-
-            .step-icon {
-                font-size: 1.5rem;
-            }
-
-            .agile-explanation {
+            .advantage-card {
                 padding: 25px;
+                border-width: 2px;
             }
 
-            .feedback-avatar {
-                width: 40px;
-                height: 40px;
+            .advantage-icon {
+                font-size: 2.5rem;
+            }
+
+            .advantage-title {
                 font-size: 1.1rem;
             }
 
-            .item-icon {
-                font-size: 2rem;
+            .advantage-description {
+                font-size: 0.95rem;
+            }
+
+            .advantages-title h3 {
+                font-size: 1.4rem;
             }
         }
     </style>
@@ -1105,139 +900,53 @@
                 <div class="divider"></div>
             </div>
 
-            <!-- WORKFLOW DIAGRAM -->
-            <div class="agile-workflow">
-                <!-- LEFT: CLIENTS & PRODUCT -->
-                <div class="workflow-left">
-                    <div class="workflow-item clients-item">
-                        <div class="item-icon">👤</div>
-                        <div class="item-label">CLIENTS</div>
-                    </div>
-                    <div class="workflow-arrow">→</div>
-                    <div class="workflow-item product-item">
-                        <div class="item-bars">
-                            <div class="bar"></div>
-                            <div class="bar"></div>
-                            <div class="bar"></div>
-                        </div>
-                        <div class="item-label">PRODUIT<br>À LIVRER</div>
-                    </div>
-                    <div class="workflow-arrow">→</div>
-                    <div class="workflow-item inprogress-item">
-                        <div class="item-bars">
-                            <div class="bar"></div>
-                            <div class="bar"></div>
-                        </div>
-                        <div class="item-label">EN COURS</div>
-                    </div>
-                </div>
-
-                <!-- CENTER: CIRCULAR FLOW WITH TEAM -->
-                <div class="workflow-center">
-                    <!-- Outer Circle with Phases -->
-                    <svg class="agile-circle-svg" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid meet">
-                        <!-- Circle Arc -->
-                        <path d="M 50 380 A 170 170 0 1 1 380 60" fill="none" stroke="#FF851B" stroke-width="8" stroke-linecap="round"/>
-                        
-                        <!-- Phase: DÉVELOPPEMENT (Top Right) -->
-                        <text x="320" y="50" font-size="14" font-weight="bold" fill="#FF851B" text-anchor="middle">DÉVELOPPEMENT</text>
-                        
-                        <!-- Phase: PARAMÉTRAGE (Top Left) -->
-                        <text x="80" y="50" font-size="14" font-weight="bold" fill="#FF851B" text-anchor="middle">PARAMÉTRAGE</text>
-                        
-                        <!-- Phase: TESTING (Left) -->
-                        <text x="20" y="200" font-size="14" font-weight="bold" fill="#FF851B" text-anchor="middle">TESTING</text>
-                        
-                        <!-- Phase: FORMATION (Bottom Left) -->
-                        <text x="80" y="380" font-size="14" font-weight="bold" fill="#FF851B" text-anchor="middle">FORMATION</text>
-                    </svg>
-
-                    <!-- Team in Center -->
-                    <div class="team-center">
-                        <div class="team-label">ÉQUIPE<br>D'IMPLÉMENTATION</div>
-                        <div class="team-avatars">
-                            <div class="team-avatar">👨</div>
-                            <div class="team-avatar">👩</div>
-                            <div class="team-avatar">👤</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- RIGHT: ANALYSIS & DELIVERABLE & USERS FEEDBACK -->
-                <div class="workflow-right">
-                    <div class="workflow-arrow">→</div>
-                    <div class="workflow-item analysis-item">
-                        <div class="item-label">ANALYSE</div>
-                    </div>
-                    <div class="workflow-arrow">→</div>
-                    <div class="workflow-item deliverable-item">
-                        <div class="item-icon">📦</div>
-                        <div class="item-label">LIVRABLE</div>
-                    </div>
-                    <div class="workflow-arrow-down"></div>
-                    <div class="workflow-item feedback-item">
-                        <div class="item-label">RETOURS DES<br>UTILISATEURS<br>FINAUX</div>
-                        <div class="feedback-avatars">
-                            <div class="feedback-avatar">👩</div>
-                            <div class="feedback-avatar">👨</div>
-                            <div class="feedback-avatar">👤</div>
-                        </div>
-                    </div>
-                </div>
+            <!-- AGILE DIAGRAM IMAGE -->
+            <div class="diagram-container">
+                <img src="agile-diagram.png" alt="Schéma Agile" class="agile-diagram-image">
             </div>
 
-            <!-- EXPLICATION -->
-            <div class="agile-explanation">
-                <h3>🔄 Le Processus Agile - Simplifié</h3>
-                <p>L'Agile repose sur <strong>un cycle continu et itératif</strong> où chaque étape contribue à la réussite du projet :</p>
-                
-                <div class="agile-steps">
-                    <div class="step-card">
-                        <div class="step-icon">👤</div>
-                        <div class="step-title">CLIENTS</div>
-                        <div class="step-desc">Définissent les besoins et objectifs</div>
-                    </div>
-
-                    <div class="step-card">
-                        <div class="step-icon">💻</div>
-                        <div class="step-title">DÉVELOPPEMENT</div>
-                        <div class="step-desc">Création et codage des fonctionnalités</div>
-                    </div>
-
-                    <div class="step-card">
-                        <div class="step-icon">⚙️</div>
-                        <div class="step-title">PARAMÉTRAGE</div>
-                        <div class="step-desc">Configuration et optimisation</div>
-                    </div>
-
-                    <div class="step-card">
-                        <div class="step-icon">✅</div>
-                        <div class="step-title">TESTING</div>
-                        <div class="step-desc">Vérification de la qualité</div>
-                    </div>
-
-                    <div class="step-card">
-                        <div class="step-icon">📚</div>
-                        <div class="step-title">FORMATION</div>
-                        <div class="step-desc">Formation de l'équipe</div>
-                    </div>
-
-                    <div class="step-card">
-                        <div class="step-icon">📦</div>
-                        <div class="step-title">LIVRABLE</div>
-                        <div class="step-desc">Mise en production</div>
-                    </div>
+            <!-- ADVANTAGES SECTION -->
+            <div class="advantages-section">
+                <div class="advantages-title">
+                    <h3>✨ Les Avantages de la Méthodologie Agile</h3>
                 </div>
 
-                <div class="agile-benefits">
-                    <h4>✨ Avantages du cycle Agile :</h4>
-                    <ul>
-                        <li>✅ Feedback continu des clients</li>
-                        <li>✅ Adaptabilité aux changements</li>
-                        <li>✅ Livraisons régulières</li>
-                        <li>✅ Meilleure qualité</li>
-                        <li>✅ Communication efficace</li>
-                    </ul>
+                <div class="advantages-grid">
+                    <div class="advantage-card">
+                        <div class="advantage-icon">⚡</div>
+                        <div class="advantage-title">Livraisons Rapides</div>
+                        <div class="advantage-description">Les sprints courts permettent des livraisons régulières et rapides. Vous obtenez des résultats concrets toutes les 1 à 4 semaines.</div>
+                    </div>
+
+                    <div class="advantage-card">
+                        <div class="advantage-icon">🔄</div>
+                        <div class="advantage-title">Flexibilité</div>
+                        <div class="advantage-description">S'adapte facilement aux changements de besoins. Les ajustements peuvent être faits à chaque sprint sans réorganisation majeure.</div>
+                    </div>
+
+                    <div class="advantage-card">
+                        <div class="advantage-icon">💬</div>
+                        <div class="advantage-title">Communication Continue</div>
+                        <div class="advantage-description">Feedback continu des clients et des utilisateurs. Chacun sait où on en est et peut contribuer à l'amélioration.</div>
+                    </div>
+
+                    <div class="advantage-card">
+                        <div class="advantage-icon">✅</div>
+                        <div class="advantage-title">Qualité Garantie</div>
+                        <div class="advantage-description">Tests et validations à chaque étape. Les problèmes sont détectés et résolus rapidement avant qu'ils ne s'aggravent.</div>
+                    </div>
+
+                    <div class="advantage-card">
+                        <div class="advantage-icon">👥</div>
+                        <div class="advantage-title">Équipe Motivée</div>
+                        <div class="advantage-description">Plus d'autonomie et de responsabilité pour l'équipe. Voyez rapidement l'impact de votre travail et célébrez les réussites.</div>
+                    </div>
+
+                    <div class="advantage-card">
+                        <div class="advantage-icon">📊</div>
+                        <div class="advantage-title">Meilleur ROI</div>
+                        <div class="advantage-description">Investissement optimisé avec retour sur investissement visible rapidement. Moins de gaspillage et plus d'efficacité.</div>
+                    </div>
                 </div>
             </div>
         </div>
