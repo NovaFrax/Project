@@ -275,7 +275,7 @@
         }
 
         .agile-container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
@@ -559,7 +559,7 @@
             font-size: 1rem;
         }
 
-        /* NOUVELLE SECTION AGILE SIMPLIFIÉE */
+        /* NOUVELLE SECTION AGILE INSPIRÉE DU SCHÉMA */
         .agile-hero {
             text-align: center;
             margin-bottom: 40px;
@@ -569,32 +569,194 @@
             margin-bottom: 20px;
         }
 
-        .circular-agile {
+        .agile-workflow {
             display: flex;
-            justify-content: center;
             align-items: center;
-            margin: 60px auto;
-            max-width: 600px;
+            justify-content: center;
+            gap: 30px;
+            margin: 60px 0;
+            flex-wrap: wrap;
         }
 
-        .agile-circle {
+        .workflow-left,
+        .workflow-right {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex: 1;
+            min-width: 300px;
+            justify-content: center;
+        }
+
+        .workflow-right {
+            flex-direction: column;
+            min-width: 200px;
+        }
+
+        .workflow-item {
+            background: linear-gradient(135deg, rgba(0, 50, 100, 0.6) 0%, rgba(0, 31, 63, 0.8) 100%);
+            border: 2px solid #FF851B;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            animation: slideUp 0.6s ease-out;
+            transition: all 0.3s ease;
+        }
+
+        .workflow-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255, 133, 27, 0.3);
+            border-color: #FFFFFF;
+        }
+
+        .clients-item {
+            min-width: 120px;
+        }
+
+        .product-item,
+        .inprogress-item {
+            min-width: 140px;
+        }
+
+        .analysis-item {
+            min-width: 100px;
+        }
+
+        .deliverable-item {
+            min-width: 120px;
+            background: linear-gradient(135deg, rgba(255, 165, 0, 0.25) 0%, rgba(255, 133, 27, 0.15) 100%);
+            border: 2px dashed #FF851B;
+        }
+
+        .feedback-item {
+            min-width: 150px;
+            margin-top: 20px;
+        }
+
+        .item-icon {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .item-label {
+            color: #FF851B;
+            font-weight: 900;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            line-height: 1.3;
+        }
+
+        .item-bars {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin-bottom: 10px;
+        }
+
+        .bar {
+            background: linear-gradient(90deg, #FFB84D, #FF851B);
+            height: 12px;
+            border-radius: 3px;
             width: 100%;
-            height: auto;
-            filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.3));
+            box-shadow: 0 2px 5px rgba(255, 133, 27, 0.4);
+        }
+
+        .workflow-arrow {
+            font-size: 2rem;
+            color: #FF851B;
+            font-weight: 900;
+        }
+
+        .workflow-arrow-down {
+            width: 3px;
+            height: 40px;
+            background: #FF851B;
+            border-radius: 3px;
+            align-self: center;
+        }
+
+        .workflow-center {
+            position: relative;
+            width: 250px;
+            height: 250px;
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .agile-circle-svg {
+            width: 100%;
+            height: 100%;
+            filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
+        }
+
+        .team-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .team-label {
+            color: #FF851B;
+            font-weight: 900;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .team-avatars {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+        }
+
+        .team-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #1E64C8 0%, #00CC44 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            border: 2px solid #FFFFFF;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        .feedback-avatars {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .feedback-avatar {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #1E64C8 0%, #00CC44 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            border: 2px solid #FF851B;
+            box-shadow: 0 2px 8px rgba(255, 133, 27, 0.3);
         }
 
         .agile-steps {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 20px;
             margin: 40px 0;
         }
 
         .step-card {
-            background: linear-gradient(135deg, rgba(0, 50, 100, 0.6) 0%, rgba(0, 31, 63, 0.8) 100%);
+            background: linear-gradient(135deg, rgba(0, 50, 100, 0.5) 0%, rgba(0, 31, 63, 0.7) 100%);
             border: 2px solid #FF851B;
-            border-radius: 10px;
-            padding: 25px;
+            border-radius: 8px;
+            padding: 20px;
             text-align: center;
             animation: slideUp 0.6s ease-out;
             transition: all 0.3s ease;
@@ -602,27 +764,26 @@
 
         .step-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(255, 133, 27, 0.3);
-            border-color: #FFFFFF;
+            box-shadow: 0 8px 20px rgba(255, 133, 27, 0.3);
         }
 
         .step-icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
+            font-size: 2rem;
+            margin-bottom: 10px;
         }
 
         .step-title {
             color: #FF851B;
             font-weight: 900;
-            font-size: 1.1rem;
+            font-size: 0.95rem;
             text-transform: uppercase;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .step-desc {
             color: #E8E8E8;
-            font-size: 0.95rem;
-            line-height: 1.6;
+            font-size: 0.85rem;
+            line-height: 1.5;
         }
 
         .agile-explanation {
@@ -662,7 +823,7 @@
 
         .agile-benefits h4 {
             color: #00CC44;
-            font-size: 1.1rem;
+            font-size: 1rem;
             margin-bottom: 15px;
             text-transform: uppercase;
         }
@@ -675,7 +836,7 @@
         .agile-benefits li {
             color: #E8E8E8;
             padding: 8px 0;
-            font-size: 1rem;
+            font-size: 0.95rem;
         }
 
         footer {
@@ -688,8 +849,23 @@
 
         /* RESPONSIVE */
         @media (max-width: 1024px) {
-            .circular-agile {
-                max-width: 500px;
+            .agile-workflow {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .workflow-left,
+            .workflow-right {
+                min-width: 100%;
+            }
+
+            .workflow-center {
+                width: 200px;
+                height: 200px;
+            }
+
+            .agile-steps {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
@@ -748,29 +924,55 @@
                 padding: 0 15px;
             }
 
-            .agile-steps {
-                grid-template-columns: 1fr;
+            .agile-workflow {
                 gap: 15px;
             }
 
+            .workflow-left,
+            .workflow-right {
+                flex-direction: column;
+                min-width: 100%;
+            }
+
+            .workflow-center {
+                width: 180px;
+                height: 180px;
+            }
+
+            .team-avatar {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+
+            .team-label {
+                font-size: 0.75rem;
+            }
+
+            .agile-steps {
+                grid-template-columns: 1fr;
+            }
+
             .step-card {
-                padding: 20px;
+                padding: 15px;
             }
 
             .step-icon {
-                font-size: 2rem;
-            }
-
-            .step-title {
-                font-size: 1rem;
-            }
-
-            .circular-agile {
-                max-width: 100%;
+                font-size: 1.5rem;
             }
 
             .agile-explanation {
                 padding: 25px;
+            }
+
+            .feedback-avatar {
+                width: 40px;
+                height: 40px;
+                font-size: 1.1rem;
+            }
+
+            .item-icon {
+                font-size: 2rem;
             }
         }
     </style>
@@ -903,97 +1105,138 @@
                 <div class="divider"></div>
             </div>
 
-            <!-- CIRCULAR DIAGRAM -->
-            <div class="circular-agile">
-                <svg class="agile-circle" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet">
-                    <!-- Cercle principal -->
-                    <circle cx="250" cy="250" r="200" fill="none" stroke="#FF851B" stroke-width="3"/>
-                    
-                    <!-- Phase 1: PLANNING (Top) -->
-                    <circle cx="250" cy="80" r="50" fill="rgba(255, 133, 27, 0.3)" stroke="#FF851B" stroke-width="2"/>
-                    <text x="250" y="70" font-size="32" text-anchor="middle" dominant-baseline="middle">📋</text>
-                    <text x="250" y="100" font-size="16" font-weight="bold" fill="#FF851B" text-anchor="middle">PLANNING</text>
-                    
-                    <!-- Flèche 1 vers 2 -->
-                    <path d="M 280 120 L 350 160" fill="none" stroke="#FF851B" stroke-width="3" marker-end="url(#arrowhead)"/>
-                    
-                    <!-- Phase 2: DÉVELOPPEMENT (Droite) -->
-                    <circle cx="420" cy="250" r="50" fill="rgba(255, 133, 27, 0.3)" stroke="#FF851B" stroke-width="2"/>
-                    <text x="420" y="240" font-size="32" text-anchor="middle" dominant-baseline="middle">💻</text>
-                    <text x="420" y="270" font-size="16" font-weight="bold" fill="#FF851B" text-anchor="middle">DEV</text>
-                    
-                    <!-- Flèche 2 vers 3 -->
-                    <path d="M 380 300 L 320 340" fill="none" stroke="#FF851B" stroke-width="3" marker-end="url(#arrowhead)"/>
-                    
-                    <!-- Phase 3: TESTING (Bas) -->
-                    <circle cx="250" cy="420" r="50" fill="rgba(255, 133, 27, 0.3)" stroke="#FF851B" stroke-width="2"/>
-                    <text x="250" y="410" font-size="32" text-anchor="middle" dominant-baseline="middle">✅</text>
-                    <text x="250" y="440" font-size="16" font-weight="bold" fill="#FF851B" text-anchor="middle">TESTING</text>
-                    
-                    <!-- Flèche 3 vers 4 -->
-                    <path d="M 180 380 L 120 340" fill="none" stroke="#FF851B" stroke-width="3" marker-end="url(#arrowhead)"/>
-                    
-                    <!-- Phase 4: REVIEW (Gauche) -->
-                    <circle cx="80" cy="250" r="50" fill="rgba(255, 133, 27, 0.3)" stroke="#FF851B" stroke-width="2"/>
-                    <text x="80" y="240" font-size="32" text-anchor="middle" dominant-baseline="middle">🔄</text>
-                    <text x="80" y="270" font-size="16" font-weight="bold" fill="#FF851B" text-anchor="middle">REVIEW</text>
-                    
-                    <!-- Flèche 4 vers 1 -->
-                    <path d="M 120 200 L 180 140" fill="none" stroke="#FF851B" stroke-width="3" marker-end="url(#arrowhead)"/>
-                    
-                    <!-- Centre: SPRINT -->
-                    <circle cx="250" cy="250" r="60" fill="rgba(255, 133, 27, 0.2)" stroke="#FF851B" stroke-width="2" stroke-dasharray="5,5"/>
-                    <text x="250" y="245" font-size="14" font-weight="bold" fill="#FF851B" text-anchor="middle">SPRINT</text>
-                    <text x="250" y="265" font-size="12" fill="#FF851B" text-anchor="middle">1-4 semaines</text>
-                    
-                    <!-- Flèches de retour (pointillés) -->
-                    <defs>
-                        <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-                            <polygon points="0 0, 10 3, 0 6" fill="#FF851B"/>
-                        </marker>
-                    </defs>
-                </svg>
+            <!-- WORKFLOW DIAGRAM -->
+            <div class="agile-workflow">
+                <!-- LEFT: CLIENTS & PRODUCT -->
+                <div class="workflow-left">
+                    <div class="workflow-item clients-item">
+                        <div class="item-icon">👤</div>
+                        <div class="item-label">CLIENTS</div>
+                    </div>
+                    <div class="workflow-arrow">→</div>
+                    <div class="workflow-item product-item">
+                        <div class="item-bars">
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                        </div>
+                        <div class="item-label">PRODUIT<br>À LIVRER</div>
+                    </div>
+                    <div class="workflow-arrow">→</div>
+                    <div class="workflow-item inprogress-item">
+                        <div class="item-bars">
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                        </div>
+                        <div class="item-label">EN COURS</div>
+                    </div>
+                </div>
+
+                <!-- CENTER: CIRCULAR FLOW WITH TEAM -->
+                <div class="workflow-center">
+                    <!-- Outer Circle with Phases -->
+                    <svg class="agile-circle-svg" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid meet">
+                        <!-- Circle Arc -->
+                        <path d="M 50 380 A 170 170 0 1 1 380 60" fill="none" stroke="#FF851B" stroke-width="8" stroke-linecap="round"/>
+                        
+                        <!-- Phase: DÉVELOPPEMENT (Top Right) -->
+                        <text x="320" y="50" font-size="14" font-weight="bold" fill="#FF851B" text-anchor="middle">DÉVELOPPEMENT</text>
+                        
+                        <!-- Phase: PARAMÉTRAGE (Top Left) -->
+                        <text x="80" y="50" font-size="14" font-weight="bold" fill="#FF851B" text-anchor="middle">PARAMÉTRAGE</text>
+                        
+                        <!-- Phase: TESTING (Left) -->
+                        <text x="20" y="200" font-size="14" font-weight="bold" fill="#FF851B" text-anchor="middle">TESTING</text>
+                        
+                        <!-- Phase: FORMATION (Bottom Left) -->
+                        <text x="80" y="380" font-size="14" font-weight="bold" fill="#FF851B" text-anchor="middle">FORMATION</text>
+                    </svg>
+
+                    <!-- Team in Center -->
+                    <div class="team-center">
+                        <div class="team-label">ÉQUIPE<br>D'IMPLÉMENTATION</div>
+                        <div class="team-avatars">
+                            <div class="team-avatar">👨</div>
+                            <div class="team-avatar">👩</div>
+                            <div class="team-avatar">👤</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT: ANALYSIS & DELIVERABLE & USERS FEEDBACK -->
+                <div class="workflow-right">
+                    <div class="workflow-arrow">→</div>
+                    <div class="workflow-item analysis-item">
+                        <div class="item-label">ANALYSE</div>
+                    </div>
+                    <div class="workflow-arrow">→</div>
+                    <div class="workflow-item deliverable-item">
+                        <div class="item-icon">📦</div>
+                        <div class="item-label">LIVRABLE</div>
+                    </div>
+                    <div class="workflow-arrow-down"></div>
+                    <div class="workflow-item feedback-item">
+                        <div class="item-label">RETOURS DES<br>UTILISATEURS<br>FINAUX</div>
+                        <div class="feedback-avatars">
+                            <div class="feedback-avatar">👩</div>
+                            <div class="feedback-avatar">👨</div>
+                            <div class="feedback-avatar">👤</div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- EXPLICATION -->
             <div class="agile-explanation">
-                <h3>🔄 Le Cycle Agile - Simple & Efficace</h3>
-                <p>L'Agile fonctionne en <strong>cycles courts appelés "Sprints"</strong> (généralement 1 à 4 semaines). Chaque sprint suit ces 4 étapes principales :</p>
+                <h3>🔄 Le Processus Agile - Simplifié</h3>
+                <p>L'Agile repose sur <strong>un cycle continu et itératif</strong> où chaque étape contribue à la réussite du projet :</p>
                 
                 <div class="agile-steps">
                     <div class="step-card">
-                        <div class="step-icon">📋</div>
-                        <div class="step-title">1. PLANNING</div>
-                        <div class="step-desc">L'équipe définit les objectifs et les tâches du sprint</div>
+                        <div class="step-icon">👤</div>
+                        <div class="step-title">CLIENTS</div>
+                        <div class="step-desc">Définissent les besoins et objectifs</div>
                     </div>
 
                     <div class="step-card">
                         <div class="step-icon">💻</div>
-                        <div class="step-title">2. DÉVELOPPEMENT</div>
-                        <div class="step-desc">Les développeurs créent et codent les fonctionnalités</div>
+                        <div class="step-title">DÉVELOPPEMENT</div>
+                        <div class="step-desc">Création et codage des fonctionnalités</div>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-icon">⚙️</div>
+                        <div class="step-title">PARAMÉTRAGE</div>
+                        <div class="step-desc">Configuration et optimisation</div>
                     </div>
 
                     <div class="step-card">
                         <div class="step-icon">✅</div>
-                        <div class="step-title">3. TESTING</div>
-                        <div class="step-desc">Les tests vérifient que tout fonctionne correctement</div>
+                        <div class="step-title">TESTING</div>
+                        <div class="step-desc">Vérification de la qualité</div>
                     </div>
 
                     <div class="step-card">
-                        <div class="step-icon">🔄</div>
-                        <div class="step-title">4. REVIEW</div>
-                        <div class="step-desc">Feedback des utilisateurs et amélioration pour le prochain sprint</div>
+                        <div class="step-icon">📚</div>
+                        <div class="step-title">FORMATION</div>
+                        <div class="step-desc">Formation de l'équipe</div>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-icon">📦</div>
+                        <div class="step-title">LIVRABLE</div>
+                        <div class="step-desc">Mise en production</div>
                     </div>
                 </div>
 
                 <div class="agile-benefits">
-                    <h4>✨ Les avantages de l'Agile :</h4>
+                    <h4>✨ Avantages du cycle Agile :</h4>
                     <ul>
-                        <li>✅ Livraisons régulières et rapides</li>
-                        <li>✅ Adaptation facile aux changements</li>
-                        <li>✅ Feedback client continu</li>
-                        <li>✅ Meilleure qualité du produit</li>
-                        <li>✅ Équipe plus motivée et autonome</li>
+                        <li>✅ Feedback continu des clients</li>
+                        <li>✅ Adaptabilité aux changements</li>
+                        <li>✅ Livraisons régulières</li>
+                        <li>✅ Meilleure qualité</li>
+                        <li>✅ Communication efficace</li>
                     </ul>
                 </div>
             </div>
